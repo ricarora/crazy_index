@@ -1,0 +1,15 @@
+<div><h2>Your Score is <%= final_score(@crazy) %></h2></div>
+
+<div>
+  <% if final_score(@crazy) == 0 %>
+    <h3>You are doing Great!</h3>
+    <% elsif 1 <= final_score(@crazy) and final_score(@crazy) <= 2 %>
+    <h3>You are Fine!</h3>
+    <% elsif 3 <= final_score(@crazy) and final_score(@crazy) <= 5 %>
+    <h3>Take a Break!!</h3>
+    <% elsif final_score(@crazy) == 6 %>
+    <h3>Talk to your Therapist!</h3>
+    <% elsif final_score(@crazy) == 7 or final_score(@crazy) == 8 %>
+    <h3>Check yourself in a Recovery!!</h3>
+  <% end %>
+</div>
